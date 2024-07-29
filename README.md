@@ -79,7 +79,11 @@ bash bin/TractorBeam.sh
 - **email_notification.sh**: Sends email notifications upon completion or failure. Edit the `config/config.cfg` file to set the recipient email address.
 - **proxy_setup.sh**: Configures proxy settings for the scraper. Edit the `config/config.cfg` file to set the HTTP and HTTPS proxy addresses.
 - **file_filtering.sh**: Filters which files to download based on extension or other criteria. Edit the `config/config.cfg` file to set the accept and reject file patterns.
-- **scheduling.sh**: Schedules scraping tasks using cron. Edit the `config/config.cfg` file to set the schedule and command to be scheduled.
+- **scheduling.sh**: Schedules scraping tasks using cron, with logging of scheduled and deleted tasks. Edit the `config/config.cfg` file to set the schedule and command to be scheduled. Provides options to:
+  - Schedule a task
+  - Delete a scheduled task
+  - Display scheduled tasks
+
 - **gui.sh**: Placeholder for GUI interactions.
 
 ### config/
