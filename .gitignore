@@ -9,6 +9,8 @@
 #[Ll]ogs/
 #[Ll]og/
 #config/
+#[*.log]
+
 
 
 # User-specific files
@@ -94,7 +96,6 @@ StyleCopReport.xml
 *.tmp
 *.tmp_proj
 *_wpftmp.csproj
-*.log
 *.tlog
 *.vspscc
 *.vssscc
