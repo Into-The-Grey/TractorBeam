@@ -119,12 +119,10 @@ We welcome contributions! Feel free to fork the repository and submit pull reque
 
 ## License
 
-TractorBeam is licensed under the MIT License. See the LICENSE file for more details.
+TractorBeam is licensed under the GNU General Public License v3.0 License. See the LICENSE file for more details.
 
 ---
 
 Just like a hungry UFO tractor beam, TractorBeam is always ready to help you gather the web content you need. Use it wisely and enjoy the power at your fingertips! 🚀
 
 ---
-
-This README provides a playful yet serious overview of TractorBeam, emphasizing its capabilities and ease of use while maintaining a lighthearted tone that fits the theme.
