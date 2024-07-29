@@ -1,5 +1,3 @@
-### README for TractorBeam
-
 # TractorBeam
 
 Welcome to **TractorBeam**! Just like an alien tractor beam that sucks up everything in its path, TractorBeam is a powerful and versatile web scraping tool designed to download website content efficiently. Whether it's good or bad, TractorBeam doesn't decide – you do!
@@ -12,7 +10,7 @@ TractorBeam is a modular, extensible, and user-friendly web scraping tool that r
 
 TractorBeam's directory structure is organized to keep everything neat and easily accessible:
 
-```
+``` bash
 TractorBeam/
 ├── bin/
 │   ├── TractorBeam.sh
@@ -88,29 +86,38 @@ bash bin/TractorBeam.sh
 
 - **site_urls.txt**: List of target URLs for scraping.
 - **config.cfg**: Configuration settings for TractorBeam.
-    - **Email Notification**: Set the recipient email address.
-        ```ini
-        EMAIL_NOTIFICATION_RECIPIENT="your-email@example.com"
-        ```
-    - **Proxy Settings**: Set the HTTP and HTTPS proxy addresses.
-        ```ini
-        HTTP_PROXY=""
-        HTTPS_PROXY=""
-        ```
-    - **File Filtering**: Set the accept and reject file patterns.
-        ```ini
-        ACCEPT_FILES=""
-        REJECT_FILES=""
-        ```
-    - **Scheduling**: Set the schedule and command to be scheduled.
-        ```ini
-        SCHEDULE=""
-        COMMAND_TO_SCHEDULE=""
-        ```
-    - **Configuration Mode**: Set the default configuration mode to easy or advanced.
-        ```ini
-        #CONFIG_MODE="easy"  # Uncomment to set default configuration mode
-        ```
+  - **Email Notification**: Set the recipient email address.
+
+      ```ini
+      EMAIL_NOTIFICATION_RECIPIENT="your-email@example.com"
+      ```
+
+  - **Proxy Settings**: Set the HTTP and HTTPS proxy addresses.
+
+      ```ini
+      HTTP_PROXY=""
+      HTTPS_PROXY=""
+      ```
+
+  - **File Filtering**: Set the accept and reject file patterns.
+
+      ```ini
+      ACCEPT_FILES=""
+      REJECT_FILES=""
+      ```
+
+  - **Scheduling**: Set the schedule and command to be scheduled.
+
+      ```ini
+      SCHEDULE=""
+      COMMAND_TO_SCHEDULE=""
+      ```
+
+  - **Configuration Mode**: Set the default configuration mode to easy or advanced.
+
+      ```ini
+      #CONFIG_MODE="easy"  # Uncomment to set default configuration mode
+      ```
 
 ### logs/
 
