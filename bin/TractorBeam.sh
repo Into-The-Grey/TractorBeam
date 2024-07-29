@@ -1,13 +1,20 @@
 #!/bin/bash
 
 # Load configurations
-source $(dirname "$0")/../config/config.cfg
-source $(dirname "$0")/../config/auth.cfg
+CONFIG_DIR=$(dirname "$0")/../config
+LOG_DIR=$(dirname "$0")/../logs
+LOG_FILE="$LOG_DIR/tractorbeam.log"
+
+# Ensure the log directory exists
+mkdir -p "$LOG_DIR"
+
+# Load other necessary scripts
+source "$CONFIG_DIR/config.cfg"
+source "$CONFIG_DIR/auth.cfg"
 source $(dirname "$0")/email_notification.sh
 source $(dirname "$0")/proxy_setup.sh
 source $(dirname "$0")/file_filtering.sh
 source $(dirname "$0")/scheduling.sh
-
 
 # Initialize variables
 PROPOSED_CMD="wget"
@@ -29,7 +36,7 @@ ask_yes_no() {
 
 # Function to log messages
 log_message() {
-    echo "$(date) - $1" >> $(dirname "$0")/../logs/download.log
+    echo "$(date) - $1" >> "$LOG_FILE"
 }
 
 # Function to update and display the proposed command
@@ -70,8 +77,8 @@ scan_website() {
 }
 
 # Check if site_urls.txt exists
-if [ -f $(dirname "$0")/../config/site_urls.txt ]; then
-    URLS=$(cat $(dirname "$0")/../config/site_urls.txt)
+if [ -f "$CONFIG_DIR/site_urls.txt" ]; then
+    URLS=$(cat "$CONFIG_DIR/site_urls.txt")
 else
     read -p "Enter the target URL: " URL
     URLS=$URL
