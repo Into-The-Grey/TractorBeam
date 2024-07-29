@@ -3,6 +3,14 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+
+# Uncomment these in for Production
+#[Bb]in/
+#[Ll]ogs/
+#[Ll]og/
+#config/
+
+
 # User-specific files
 *.rsuser
 *.suo
@@ -28,7 +36,6 @@ x86/
 [Aa][Rr][Mm]64/
 bld/
 [Oo]bj/
-[Ll]og/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
