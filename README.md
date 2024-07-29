@@ -42,7 +42,7 @@ TractorBeam/
 
 ## Getting Started
 
-### Step 1: Initialization, Skip to Step 2 if you have cloned the repository
+### Step 1: Initialization (Skip if you have cloned the repository)
 
 Run the initialization script to set up the directory structure and create placeholder files:
 
@@ -88,6 +88,29 @@ bash bin/TractorBeam.sh
 
 - **site_urls.txt**: List of target URLs for scraping.
 - **config.cfg**: Configuration settings for TractorBeam.
+    - **Email Notification**: Set the recipient email address.
+        ```ini
+        EMAIL_NOTIFICATION_RECIPIENT="your-email@example.com"
+        ```
+    - **Proxy Settings**: Set the HTTP and HTTPS proxy addresses.
+        ```ini
+        HTTP_PROXY=""
+        HTTPS_PROXY=""
+        ```
+    - **File Filtering**: Set the accept and reject file patterns.
+        ```ini
+        ACCEPT_FILES=""
+        REJECT_FILES=""
+        ```
+    - **Scheduling**: Set the schedule and command to be scheduled.
+        ```ini
+        SCHEDULE=""
+        COMMAND_TO_SCHEDULE=""
+        ```
+    - **Configuration Mode**: Set the default configuration mode to easy or advanced.
+        ```ini
+        #CONFIG_MODE="easy"  # Uncomment to set default configuration mode
+        ```
 
 ### logs/
 
