@@ -385,3 +385,9 @@ send_email "Download Completed" "Your download has finished." "$RECIPIENT_EMAIL"
 
 log_message "Download completed."
 
+# Schedule next download
+if ask_yes_no "Would you like to schedule the next download?"; then
+    schedule_next_download
+fi
+
+echo "All done!"
