@@ -3,6 +3,11 @@
 # Load configurations
 source $(dirname "$0")/../config/config.cfg
 source $(dirname "$0")/../config/auth.cfg
+source $(dirname "$0")/email_notification.sh
+source $(dirname "$0")/proxy_setup.sh
+source $(dirname "$0")/file_filtering.sh
+source $(dirname "$0")/scheduling.sh
+
 
 # Initialize variables
 PROPOSED_CMD="wget"
@@ -135,6 +140,7 @@ log_message "Starting download of $URLS"
 
 # Construct final wget command
 WGET_CMD="$PROPOSED_CMD $URLS"
+WGET_CMD="$WGET_CMD $FILTER_OPTIONS"
 
 # Include authentication credentials if available
 if [ -n "$AUTH_CREDENTIALS" ]; then
@@ -158,5 +164,7 @@ if [ $? -ne 0 ]; then
         eval $WGET_CMD
     fi
 fi
+
+send_email "Download Completed" "Your download has finished." "$RECIPIENT_EMAIL"
 
 log_message "Download completed."

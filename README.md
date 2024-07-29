@@ -78,10 +78,10 @@ bash bin/TractorBeam.sh
 - **TractorBeam.sh**: The main script that orchestrates the web scraping.
 - **auth_script.sh**: Handles authentication if required by the target site.
 - **other_scripts.sh**: Placeholder for additional scripts.
-- **email_notification.sh**: Send email notifications upon completion or failure.
-- **proxy_setup.sh**: Configure proxy settings for the scraper.
-- **file_filtering.sh**: Filter which files to download based on extension or other criteria.
-- **scheduling.sh**: Schedule scraping tasks.
+- **email_notification.sh**: Sends email notifications upon completion or failure. Edit the `config/config.cfg` file to set the recipient email address.
+- **proxy_setup.sh**: Configures proxy settings for the scraper. Edit the `config/config.cfg` file to set the HTTP and HTTPS proxy addresses.
+- **file_filtering.sh**: Filters which files to download based on extension or other criteria. Edit the `config/config.cfg` file to set the accept and reject file patterns.
+- **scheduling.sh**: Schedules scraping tasks using cron. Edit the `config/config.cfg` file to set the schedule and command to be scheduled.
 - **gui.sh**: Placeholder for GUI interactions.
 
 ### config/
